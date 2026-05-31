@@ -67,3 +67,28 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+
+# Build output
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Bb]uild/
+*.exe
+*.obj
+*.pdb
+*.ilk
+*.idb
+
+# MSBuild intermediates
+*.tlog
+*.log
+*.recipe
+*.lastbuildstate
+textbase.*/
+
+# Visual Studio user/IDE file
+.vs/
+*.vcxproj.user
+*.VC.db
+opendb
