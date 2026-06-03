@@ -1,0 +1,9 @@
+
+
+
+Items:
+Drops geben eine Richtung, aber nicht den ganzen Build
+Gut funktioniert: ein seltenes Item gibt dir den Kern (z.B. "Blitzschaden skaliert mit Tempo") und du suchst dann aktiv nach Teilen, die dazu passen.
+Wie sucht man danach? Wo gibt es dann explizit "Blitzschaden-Teile" zu finden? Wie ist das mit dem Zufallsprinzip bei jedem Neustart zu vereinbaren? 
+Es soll keine vorgefertigten "Blitzschaden-Zonen" geben
+
