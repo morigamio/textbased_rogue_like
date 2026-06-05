@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -139,6 +139,7 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="src\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -148,6 +149,13 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="design.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\AnsiCommands.h" />
+    <ClInclude Include="src\ConsoleUtils.h" />
+    <ClInclude Include="src\FrameBuilder.h" />
+    <ClInclude Include="src\Game.h" />
+    <ClInclude Include="src\Player.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
