@@ -1,11 +1,15 @@
 #pragma once
 #include <string>
 #include "Player.h"
+#include "Screen.h"
 
 class Game {
 
 public:
-	Game() = default;
+	Game(int rows, int cols) :
+		player(0, 0),
+		screen(rows, cols) {
+	};
 	~Game() = default;
 	void run();
 
@@ -16,7 +20,8 @@ private:
 	bool m_running = true;
 	std::string m_frameBuffer;
 
-	Player player = Player(0,0);
+	Screen screen;
+	Player player;
 
 	void input();
 	void update();

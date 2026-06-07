@@ -19,3 +19,6 @@ ist schriftlich gut darstellbar
 
 skillen ermäglicht erhöhen max actionen
 schwerere gegner haben mehrere aktionen, oder mehr dmg pro aktion
+
+collection/achievements
+gathering game?
