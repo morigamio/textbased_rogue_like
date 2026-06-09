@@ -9,11 +9,7 @@ void Game::run() {
 	while (m_running) {
 		input();
 		update();
-		// render();
-		std::cout << ansi::MOVE_TO(player.m_x, player.m_y);
-		std::cout << ansi::BG(0, 140, 255); // blue background
-		std::cout << ansi::FG(255, 255, 255); // white text
-		std::cout << "@"; // draw player character
+		render();
 
 		std::this_thread::sleep_for(std::chrono::milliseconds(33)); // simple approach to get 30ish fps
 	}
@@ -34,10 +30,11 @@ void Game::input() {
 }
 
 void Game::update() {
-	// check player collision with boundaries
-
+	
 }
 
 void Game::render() {
-
+	screen.clear();
+	screen.put(player.m_x, player.m_y, "@", 123, 22, 0); // draw player character
+	screen.present();
 }

@@ -23,7 +23,6 @@ namespace ansi {
 	inline constexpr std::string_view ITALIC = "\033[3m";
 	inline constexpr std::string_view UNDERLINE = "\033[4m";
 	inline constexpr std::string_view BLINK = "\033[5m";
-	inline constexpr std::string_view REVERSE = "\033[7m"; // swap fg/bg
 
 	inline constexpr std::string_view RESET = "\033[0m";
 
@@ -49,7 +48,7 @@ namespace ansi {
 
 	// "\033[<row>;<col>H" — move cursor to absolute position
 	inline std::string MOVE_TO(int col, int row) {
-		return "\033[" + std::to_string(col) + ";" + std::to_string(row) + "H";
+		return "\033[" + std::to_string(row) + ";" + std::to_string(col) + "H";
 	}
 
 	// "\033[<col>G" — move cursor to absolute column on the current row
@@ -58,10 +57,10 @@ namespace ansi {
 	}
 
 	// relative cursor movement
-	inline std::string UP(int n = 1)    { return "\033[" + std::to_string(n) + "A"; }
-	inline std::string DOWN(int n = 1)  { return "\033[" + std::to_string(n) + "B"; }
+	inline std::string UP(int n = 1) { return "\033[" + std::to_string(n) + "A"; }
+	inline std::string DOWN(int n = 1) { return "\033[" + std::to_string(n) + "B"; }
 	inline std::string RIGHT(int n = 1) { return "\033[" + std::to_string(n) + "C"; }
-	inline std::string LEFT(int n = 1)  { return "\033[" + std::to_string(n) + "D"; }
+	inline std::string LEFT(int n = 1) { return "\033[" + std::to_string(n) + "D"; }
 
 	// 24-bit truecolor — foreground / background from RGB
 	inline std::string FG(int r, int g, int b) {
@@ -70,4 +69,8 @@ namespace ansi {
 	inline std::string BG(int r, int g, int b) {
 		return "\033[48;2;" + std::to_string(r) + ";" + std::to_string(g) + ";" + std::to_string(b) + "m";
 	}
+
+	// 256-color indexed palette (single byte 0–255)
+	inline std::string FG256(int idx) { return "\033[38;5;" + std::to_string(idx) + "m"; }
+	inline std::string BG256(int idx) { return "\033[48;5;" + std::to_string(idx) + "m"; }
 }
