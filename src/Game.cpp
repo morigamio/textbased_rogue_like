@@ -17,24 +17,37 @@ void Game::run() {
 
 void Game::input() {
 	// input
-	if (_kbhit()) {           // returns true if a keyinput is waiting to be processed
-		int key = _getch();   // read one keypress, no Enter needed
+	if (_kbhit()) { // returns true if a keyinput is waiting to be processed
+		int key = _getch(); // read one keypress, no Enter needed
+
+		int tmpPosX = 0; // temporary variables to hold the potential new position of the player
+		int tmpPosY = 0; // these will be used to check if the new position is valid before actually moving the player
+		
 		switch (key) {
-			case ESC: m_running = false; break;
-			case UP: player.move(0, -1); break;
-			case DOWN: player.move(0, 1); break;
-			case LEFT: player.move(-1, 0); break;
-			case RIGHT: player.move(1, 0); break;
+		case ESC: m_running = false; break;
+		case UP: tmpPosY = -1; break;
+		case DOWN: tmpPosY = 1; break;
+		case LEFT: tmpPosX = -1; break;
+		case RIGHT: tmpPosX = 1; break;
+		}
+
+		if (map.isWalkable(player.m_x + tmpPosX, player.m_y + tmpPosY)) {
+			player.move(tmpPosX, tmpPosY);
 		}
 	}
 }
 
+
 void Game::update() {
-	
+
 }
 
 void Game::render() {
 	screen.clear();
-	screen.put(player.m_x, player.m_y, "@", 123, 22, 0); // draw player character
+	for (size_t i = 0; i < map.rows(); i++)
+	{
+
+	}
+	screen.put(player.m_x, player.m_y, "@", 0, 2, 0); // draw player character
 	screen.present();
 }

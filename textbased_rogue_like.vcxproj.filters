@@ -43,10 +43,16 @@
     <ClInclude Include="src\Game.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="src\Player.h">
+    <ClInclude Include="src\Entity.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="src\Screen.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Map.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tile.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

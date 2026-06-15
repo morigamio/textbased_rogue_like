@@ -17,8 +17,24 @@ visualisiert stärker werden
 lässt Berechnungen zur Optimierung zu
 ist schriftlich gut darstellbar
 
-skillen ermäglicht erhöhen max actionen
+skillen erhöhen max actionen
 schwerere gegner haben mehrere aktionen, oder mehr dmg pro aktion
 
 collection/achievements
 gathering game?
+
+items sind farblich markiert, weiß = häufig, grün = selten, blau = rar, lila = episch, orange = legendär
+items werden als folgender icon dargestellt: 
+items werden beim drauflaufen angezeigt in einem Panel des Frames
+zeigt Werte und Beschreibung (z.B. "Blitzschaden +8, Tempo +5")
+geld ist gelb = $
+
+interessante glyphen: ¤ ‿ 
+portal: ⌺
+
+startbedingungen:
+andere stats, andere waffe? anderes element? andere basic skill, andere passive?
+andere rasse? andere Klasse?
+
+
+https://www.compart.com/en/unicode/category/Pc

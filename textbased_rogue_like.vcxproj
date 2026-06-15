@@ -155,8 +155,10 @@
     <ClInclude Include="src\ConsoleUtils.h" />
     <ClInclude Include="src\FrameBuilder.h" />
     <ClInclude Include="src\Game.h" />
-    <ClInclude Include="src\Player.h" />
+    <ClInclude Include="src\Map.h" />
+    <ClInclude Include="src\Entity.h" />
     <ClInclude Include="src\Screen.h" />
+    <ClInclude Include="src\Tile.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

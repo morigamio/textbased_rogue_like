@@ -1,9 +1,9 @@
 #pragma once
 
-class Player {
+class Entity {
 public:
-	Player(int x, int y): m_x(x), m_y(y){}
-	~Player() = default;
+	Entity(int x, int y): m_x(x), m_y(y){}
+	~Entity() = default;
 
 	void move(int dx, int dy) { m_x += dx; m_y += dy; }
 

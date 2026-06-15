@@ -1,7 +1,8 @@
 #pragma once
 #include <string>
-#include "Player.h"
 #include "Screen.h"
+#include "Entity.h"
+#include "Map.h"
 
 class Game {
 
@@ -19,8 +20,10 @@ private:
 	};
 	bool m_running = true;
 
+	Map map;
 	Screen screen;
-	Player player;
+	Entity player;
+	std::vector<Entity> entities; // e.g. monsters, items, etc.
 
 	void input();
 	void update();
