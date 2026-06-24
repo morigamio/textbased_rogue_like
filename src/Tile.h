@@ -26,7 +26,7 @@ inline TileInfo getTileInfo(Tile tile) {
 	switch (tile) {
 	case Tile::Empty: return TileInfo{ " ", 7, 0, false };
 	case Tile::Floor: return TileInfo{ ".", 246, 0, true };
-	case Tile::Wall: return TileInfo{ "#", 240, 0, false };
+	case Tile::Wall: return TileInfo{ "#", 130, 0, false };
 	case Tile::Door: return TileInfo{ "+", 180, 0, true };
 	case Tile::StairsUp: return TileInfo{ "<", 7, 0, true };
 	case Tile::StairsDown: return TileInfo{ ">", 7, 0, true };
