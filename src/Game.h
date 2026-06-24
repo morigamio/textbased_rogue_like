@@ -8,7 +8,7 @@ class Game {
 
 public:
 	Game(int rows, int cols) :
-		player(1, 1),
+		player(2, 2),
 		screen(rows, cols) {
 	};
 	~Game() = default;

@@ -18,7 +18,7 @@ public:
 		m_rows = map_layout.empty() ? 0 : map_layout.size();
 		m_cols = map_layout.empty() ? 0 : map_layout[0].size();
 		for (const std::string& row : map_layout) {
-			for (int i = 0; i < row.length(); i++)
+			for (size_t i = 0; i < row.length(); i++)
 			{
 				switch (row[i]) {
 				case '.': map.push_back(Tile::Floor); break;
@@ -27,6 +27,10 @@ public:
 				case '<': map.push_back(Tile::StairsUp); break;
 				case '>': map.push_back(Tile::StairsDown); break;
 				case 'O': map.push_back(Tile::Trapdoor); break;
+				case '|': map.push_back(Tile::Fence); break;
+				case '=': map.push_back(Tile::Bridge); break;
+				case '~': map.push_back(Tile::Water); break;
+				case 'V': map.push_back(Tile::Vendor); break;
 				default: map.push_back(Tile::Empty); // ignore unknown characters, treat as empty space
 				}
 			}
@@ -58,13 +62,13 @@ public:
 
 private:
 	std::vector<std::string> map_layout = {
-		"##########          ",
-		"#........#          ",
-		"#+###....###########",
-		"    #..............+",
-		"    #........#######",
-		"    #........#      ",
-		"    ##########      "
+		"##########    ~~    ",
+		"#........#    ~~    ",
+		"#+###....######~####",
+		"    #.........===..+",
+		"    #........##~####",
+		"    #..|V|...# ~~   ",
+		"    ########## ~~~  "
 	};
 
 	std::vector<Tile> map;

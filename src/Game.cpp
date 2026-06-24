@@ -3,6 +3,7 @@
 #include <iostream>
 #include <thread>
 #include <conio.h>
+#include <map>
 
 
 void Game::run() {
@@ -44,9 +45,14 @@ void Game::update() {
 
 void Game::render() {
 	screen.clear();
-	for (size_t i = 0; i < map.rows(); i++)
+	for (size_t y = 1; y <= map.rows(); y++) // starts at 1 because the map is 1-indexed
 	{
-
+		for (size_t x = 1; x <= map.cols(); x++) // starts at 1 because the map is 1-indexed
+		{
+			Tile tile = map.tileAt(x, y);
+			TileInfo tileInfo = getTileInfo(tile);
+			screen.put(x, y, tileInfo.glyph, tileInfo.bg, tileInfo.fg, 0);
+		}
 	}
 	screen.put(player.m_x, player.m_y, "@", 0, 2, 0); // draw player character
 	screen.present();
