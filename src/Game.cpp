@@ -54,6 +54,6 @@ void Game::render() {
 			screen.put(x, y, tileInfo.glyph, tileInfo.bg, tileInfo.fg, 0);
 		}
 	}
-	screen.put(player.m_x, player.m_y, "@", 0, 2, 0); // draw player character
+	screen.put(player.m_x, player.m_y, "@", 0, 229, 0);
 	screen.present();
 }

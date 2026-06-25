@@ -22,15 +22,22 @@ public:
 			{
 				switch (row[i]) {
 				case '.': map.push_back(Tile::Floor); break;
-				case '#': map.push_back(Tile::Wall); break;
+				case '#': map.push_back(Tile::Border); break;
 				case '+': map.push_back(Tile::Door); break;
 				case '<': map.push_back(Tile::StairsUp); break;
 				case '>': map.push_back(Tile::StairsDown); break;
 				case 'O': map.push_back(Tile::Trapdoor); break;
-				case '|': map.push_back(Tile::Fence); break;
+				case '|': map.push_back(Tile::VrtclWall); break;
+				case '-': map.push_back(Tile::HrztlWall); break;
 				case '=': map.push_back(Tile::Bridge); break;
 				case '~': map.push_back(Tile::Water); break;
-				case 'V': map.push_back(Tile::Vendor); break;
+				case 'W': map.push_back(Tile::Weaponsmith); break;
+				case 'A': map.push_back(Tile::Armorsmith); break;
+				case 'P': map.push_back(Tile::Alchemist); break;
+				case 'S': map.push_back(Tile::Teacher); break;
+				case 'F': map.push_back(Tile::Food); break;
+				case '*': map.push_back(Tile::Bush); break; 
+				case '&': map.push_back(Tile::Tree); break;
 				default: map.push_back(Tile::Empty); // ignore unknown characters, treat as empty space
 				}
 			}
@@ -62,13 +69,23 @@ public:
 
 private:
 	std::vector<std::string> map_layout = {
-		"##########    ~~    ",
-		"#........#    ~~    ",
-		"#+###....######~####",
-		"    #.........===..+",
-		"    #........##~####",
-		"    #..|V|...# ~~   ",
-		"    ########## ~~~  "
+		"########~~##############################################################",
+		"#.&&*&..~~....................................&*&.*&..&&.*.&...........#",
+		"#..*.....~~.........-----...................&.*&.*&..&.*&..*...........#",
+		"#..........~~~......*|P|*.....................&.*&....&.*&........&....#",
+		"#...-----....~~................................&.*&....&*....*..*&*.6..#",
+		"#...*|A|*.....~~....&&.......-----...............&.............*&.*.*&.#",
+		"#..............~~...&&&......*|S|*...........................**...**&*.#",
+		"#.............*~~*................................................&....#",
+		"#..&.*.&.......==....................................&.&..&............#",
+		"#....*&.&*.....==......*..................&.*&........*.&.*............#",
+		"#.............*~~*..*.&.&................&*.&......*.&..*.&..*.........#",
+		"#....*|F|*......~~...&.&.*................&.........*.*.&.*............#",
+		"#....-----.......~~~.....................&.*&..........*.......&&.*.&..#",
+		"#&.&........*......~~~.......*|W|*.....&.*&...................&.*&..*..#",
+		"#.**.....*.&&.*&.....~~......-----.....&&.*....................&.*&....#",
+		"#..&....&&.*&.&&*&...~~................&*.......................&*.<...#",
+		"#####################~~#################################################",
 	};
 
 	std::vector<Tile> map;

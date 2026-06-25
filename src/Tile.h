@@ -5,7 +5,7 @@
 enum class Tile {
 	Empty,
 	Floor,
-	Wall,
+	Border,
 	Door,
 	StairsUp,
 	StairsDown,
@@ -13,7 +13,15 @@ enum class Tile {
 	Fence,
 	Bridge,
 	Water,
-	Vendor
+	Weaponsmith,
+	Armorsmith,
+	Teacher,
+	Food,
+	Alchemist,
+	Bush,
+	Tree,
+	HrztlWall,
+	VrtclWall,
 };
 
 struct TileInfo {
@@ -25,16 +33,23 @@ struct TileInfo {
 inline TileInfo getTileInfo(Tile tile) {
 	switch (tile) {
 	case Tile::Empty: return TileInfo{ " ", 7, 0, false };
-	case Tile::Floor: return TileInfo{ ".", 246, 0, true };
-	case Tile::Wall: return TileInfo{ "#", 130, 0, false };
-	case Tile::Door: return TileInfo{ "+", 180, 0, true };
-	case Tile::StairsUp: return TileInfo{ "<", 7, 0, true };
-	case Tile::StairsDown: return TileInfo{ ">", 7, 0, true };
-	case Tile::Trapdoor: return TileInfo{ "O", 7, 0, true };
-	case Tile::Fence: return TileInfo{ "|", 144, 0, false };
+	case Tile::Floor: return TileInfo{ ".", 95, 0, true };
+	case Tile::Border: return TileInfo{ "#", 130, 0, false };
 	case Tile::Bridge: return TileInfo{ "=", 137, 0, true };
-	case Tile::Water: return TileInfo{ "~", 117, 0, false };
-	case Tile::Vendor: return TileInfo{ "V", 226, 0, true };
+	case Tile::VrtclWall: return TileInfo{ "|", 173, 0, false };
+	case Tile::HrztlWall: return TileInfo{ "-", 173, 0, false };
+	case Tile::Door: return TileInfo{ "+", 180, 0, true };
+	case Tile::StairsUp: return TileInfo{ "<", 223, 0, true };
+	case Tile::StairsDown: return TileInfo{ ">", 223, 0, true };
+	case Tile::Trapdoor: return TileInfo{ "O", 94, 0, true };
+	case Tile::Water: return TileInfo{ "~", 74, 0, false };
+	case Tile::Weaponsmith: return TileInfo{ "W", 250, 0, true };
+	case Tile::Armorsmith: return TileInfo{ "A", 244, 0, true };
+	case Tile::Teacher: return TileInfo{ "T", 99, 0, true };
+	case Tile::Food: return TileInfo{ "F", 208, 0, true };
+	case Tile::Alchemist: return TileInfo{ "P", 39, 0, true };
+	case Tile::Bush: return TileInfo{ "*", 28, 0, false };
+	case Tile::Tree: return TileInfo{ "&", 22, 0, false };
 	default: return TileInfo{ " ", 7, 0, false };
 	}
 }
