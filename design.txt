@@ -14,8 +14,8 @@ Frost Synergie Bonus  + 20%
 ─────────────────────
 					45
 visualisiert stärker werden
-lässt Berechnungen zur Optimierung zu
 ist schriftlich gut darstellbar
+lässt Berechnungen zur Optimierung zu
 
 skillen erhöhen max actionen
 schwerere gegner haben mehrere aktionen, oder mehr dmg pro aktion

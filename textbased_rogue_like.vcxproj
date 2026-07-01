@@ -149,10 +149,13 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="design.txt" />
+    <Text Include="resources\weapons\weapons.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\AnsiCommands.h" />
     <ClInclude Include="src\ConsoleUtils.h" />
+    <ClInclude Include="src\EntityParser.h" />
+    <ClInclude Include="src\external\nlohmann\json.hpp" />
     <ClInclude Include="src\FrameBuilder.h" />
     <ClInclude Include="src\Game.h" />
     <ClInclude Include="src\Map.h" />

@@ -29,6 +29,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="design.txt" />
+    <Text Include="resources\weapons\weapons.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\AnsiCommands.h">
@@ -53,6 +54,12 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="src\Tile.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EntityParser.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="src\external\nlohmann\json.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

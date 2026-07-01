@@ -22,6 +22,9 @@ enum class Tile {
 	Tree,
 	HrztlWall,
 	VrtclWall,
+	Weapon,
+	Armor,
+	Consumable,
 };
 
 struct TileInfo {
@@ -50,6 +53,8 @@ inline TileInfo getTileInfo(Tile tile) {
 	case Tile::Alchemist: return TileInfo{ "P", 39, 0, true };
 	case Tile::Bush: return TileInfo{ "*", 28, 0, false };
 	case Tile::Tree: return TileInfo{ "&", 22, 0, false };
+	case Tile::Weapon: return TileInfo{ "!", 15, 0, true }; // base color is white, gets recolored based on weapon rarity
+	case Tile::Armor: return TileInfo{ "]", 15, 0, true }; // same as above
 	default: return TileInfo{ " ", 7, 0, false };
 	}
 }

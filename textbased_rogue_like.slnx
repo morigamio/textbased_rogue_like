@@ -3,5 +3,6 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
+  <Project Path="../Testing/Testing.vcxproj" Id="1b5dde79-1e19-4160-99b1-f57be4e8b17c" />
   <Project Path="textbased_rogue_like.vcxproj" Id="353058b5-ec3a-408d-b065-46072fd48430" />
 </Solution>
